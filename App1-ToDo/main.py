@@ -1,8 +1,7 @@
 # Initial list to be manipulated
-file_read = open("App1-ToDo/todos.txt", "r")
-todos = file_read.readlines()
-
-file_write = open('App1-ToDo/todos.txt', "w")
+file = open("App1-ToDo/todos.txt", "r")
+todos = file.readlines()
+file.close()
 
 while True:
     
@@ -21,7 +20,9 @@ while True:
             
             todos.append(todo)
             
-            file_write.writelines(todos)
+            file = open("App1-ToDo/todos.txt", "w")
+            file.writelines(todos)
+            file.close()
             
         # Shows To-Do list
         case 'show':
@@ -38,7 +39,10 @@ while True:
                 todos[number - 1] = new 
             else:
                 print("Index of todo not found")
-            file_write.writelines(todos)
+
+            file = open("App1-ToDo/todos.txt", "w")
+            file.writelines(todos)
+            file.close()
                 
         # Completes and removes an item from To-Do list
         case 'complete':
@@ -49,7 +53,10 @@ while True:
                 todos.pop(number - 1)
             else:
                 print("Index of todo not found")
-            file_write.writelines(todos)
+
+            file = open("App1-ToDo/todos.txt", "w")
+            file.writelines(todos)
+            file.close()
                 
         # Ends the program
         case 'exit':
@@ -58,10 +65,6 @@ while True:
         # Edge case of unknown commands
         case foo:
             print("Unknown command")
-
-# Closes files
-file_read.close()
-file_write.close()
 
 # Exit print
 print("Bye!")
