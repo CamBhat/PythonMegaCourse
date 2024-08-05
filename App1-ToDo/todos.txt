@@ -1,4 +1,6 @@
 help
 hello
 throw
-clean
+remind
+test
+another test
