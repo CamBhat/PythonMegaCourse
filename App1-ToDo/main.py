@@ -27,7 +27,7 @@ while True:
         # Shows To-Do list
         case 'show':
             for index, todo in enumerate(todos):
-                print(f"{index + 1} - {todo}")
+                print(f"{index + 1} - {todo.strip("\n")}")
                 
         # Edits an item in the To-Do list
         case 'edit':
