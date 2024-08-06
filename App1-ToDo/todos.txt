@@ -1,4 +1,3 @@
-hello
 remind
 another test
-Clean the bagFix the drawer
+clean bag
