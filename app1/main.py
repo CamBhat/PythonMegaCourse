@@ -3,10 +3,20 @@ with open("app1/todos.txt", "r") as file:
     todos = file.readlines()
 
 def write_todos(todos):
+    """ Writes todo list to text file
+
+    Args:
+        todos (list): List of todos
+    """
     with open("app1/todos.txt", "w") as file:
         file.writelines(todos)
 
 def add_todo(user_action):
+    """ Adds todo list to global variable and rewrites to text file
+
+    Args:
+        user_action (string): includes action and possibly more information
+    """
     if (len(user_action) <= 4):
         todo = input("Enter a todo: ") + "\n"
         todos.append(todo)
@@ -18,6 +28,11 @@ def add_todo(user_action):
         write_todos(todos)
 
 def edit_todo(user_action):
+    """ Edits an existing todo and rewrites to the text file
+
+    Args:
+        user_action (string): includes action and possibly more information
+    """
     try:
         if (len(user_action) <= 4):
             number = int(input("Number of todo to edit: "))    
@@ -37,6 +52,11 @@ def edit_todo(user_action):
         return
 
 def complete_todo(user_action):
+    """ Completes a given todo item and rewrites to text file
+
+    Args:
+        user_action (string): includes action and possibly more information
+    """
     number = 0
     
     try:
