@@ -1,6 +1,4 @@
-help
 hello
-throw
 remind
-test
 another test
+Clean the bagFix the drawer
