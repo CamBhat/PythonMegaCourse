@@ -1,4 +1,9 @@
 from app1.modules.functions import *
+import time
+
+current_time = time.strftime("%Y-%m-%d %H:%M:%S")
+
+print(f"It is currently {current_time}.")
 
 while True:
     
