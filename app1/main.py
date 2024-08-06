@@ -1,5 +1,5 @@
 # Initial list to be manipulated
-with open("app1/todos.txt", "r") as file:
+with open("todos.txt", "r") as file:
     todos = file.readlines()
 
 def write_todos(todos):
@@ -8,7 +8,7 @@ def write_todos(todos):
     Args:
         todos (list): List of todos
     """
-    with open("app1/todos.txt", "w") as file:
+    with open("todos.txt", "w") as file:
         file.writelines(todos)
 
 def add_todo(user_action):
@@ -60,7 +60,7 @@ def complete_todo(user_action):
     number = 0
     
     try:
-        if (len(user_action) <= 8):
+        if len(user_action) <= 8:
                 number = int(input("Number of todo to complete: "))    
         else:
             number = int(user_action[8:])
@@ -91,7 +91,8 @@ while True:
     # Shows To-Do list
     elif user_action.startswith('show'):
         for index, todo in enumerate(todos):
-            print(f"{index + 1} - {todo.strip("\n")}")
+            todo = todo.strip("\n")
+            print(f"{index + 1} - {todo}")
                 
     # Edits an item in the To-Do list
     elif user_action.startswith('edit'):
