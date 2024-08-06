@@ -1,9 +1,9 @@
 # Initial list to be manipulated
-with open("App1-ToDo/todos.txt", "r") as file:
+with open("app1/todos.txt", "r") as file:
     todos = file.readlines()
 
 def write_todos(todos):
-    with open("App1-ToDo/todos.txt", "w") as file:
+    with open("app1/todos.txt", "w") as file:
         file.writelines(todos)
 
 def add_todo(user_action):
