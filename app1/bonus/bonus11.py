@@ -1,5 +1,5 @@
 def get_average():
-    with open("app1/bonus/files/data.txt", "r") as file:
+    with open("files/data.txt", "r") as file:
         data = file.readlines()
     
     values = data[1:]

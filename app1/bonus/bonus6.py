@@ -5,5 +5,5 @@ contents = ["Contents 1",
 filenames = ["doc.txt", "report.txt", "presentation.txt"]
 
 for content, filename in zip(contents, filenames):
-    file = open(f"app1/files/{filename}", "w")
+    file = open(f"files/{filename}", "w")
     file.write(content)
