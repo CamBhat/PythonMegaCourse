@@ -21,7 +21,7 @@ window = sg.Window("My To-Do App",
                            [exit_button]],
                    font=("Helvetica", 20))
 
-#Monitors functionality happening in window
+# Monitors functionality happening in window
 while True:
     event, values = window.read()
     match event:
