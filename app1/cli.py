@@ -1,4 +1,4 @@
-from app1.modules.functions import *
+from modules.functions import *
 import time
 
 current_time = time.strftime("%Y-%m-%d %H:%M:%S")
