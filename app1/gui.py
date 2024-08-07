@@ -1,6 +1,7 @@
 from modules.functions import *
 import FreeSimpleGUI as sg
 
+# All items in window
 label = sg.Text("Type in a to-do")
 input_box = sg.InputText(tooltip="Enter todo", key="todo")
 add_button = sg.Button("Add")
@@ -12,12 +13,15 @@ edit_button = sg.Button("Edit")
 complete_button = sg.Button("Complete")
 exit_button = sg.Button("Exit")
 
+# Window definition
 window = sg.Window("My To-Do App",
                    layout=[[label],
                            [input_box, add_button],
                            [list_box, edit_button, complete_button],
                            [exit_button]],
                    font=("Helvetica", 20))
+
+#Monitors functionality happening in window
 while True:
     event, values = window.read()
     match event:
@@ -50,7 +54,5 @@ while True:
             window["todo"].update(value=values["todos"][0])
         case sg.WIN_CLOSED:
             break
-
-    print(values)
 
 window.close()
