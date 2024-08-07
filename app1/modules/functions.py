@@ -4,7 +4,7 @@ def read_todos():
     Returns:
     To do list
     """
-    with open("../todos.txt", "r") as file:
+    with open("todos.txt", "r") as file:
         todos = file.readlines()
     return todos
 
@@ -14,7 +14,7 @@ def write_todos(todos):
     Args:
         todos (list): List of todos
     """
-    with open("../todos.txt", "w") as file:
+    with open("todos.txt", "w") as file:
         file.writelines(todos)
 
 def add_todo(user_action):
