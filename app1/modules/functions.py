@@ -1,20 +1,20 @@
-def read_todos():
+def read_todos(filepath="todos.txt"):
     """
     Reads todo list from text file
     Returns:
     To do list
     """
-    with open("todos.txt", "r") as file:
+    with open(filepath, "r") as file:
         todos = file.readlines()
     return todos
 
-def write_todos(todos):
+def write_todos(todos, filepath="todos.txt"):
     """ Writes todo list to text file
 
     Args:
         todos (list): List of todos
     """
-    with open("todos.txt", "w") as file:
+    with open(filepath, "w") as file:
         file.writelines(todos)
 
 def add_todo(user_action):
